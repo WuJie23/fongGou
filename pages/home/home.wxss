@@ -1,0 +1,32 @@
+/* pages/home/home.wxss */
+.swiperBox {
+  margin: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.swiperItemImg {
+  width: 100%;
+}
+.searchbar {
+  z-index: 999999999;
+  background-color: #ffed46;
+  position: sticky;
+  top: 10rpx;
+  border-radius: 20rpx;
+  margin: 10rpx 20rpx;
+  height: 80rpx;
+}
+.cardBoxItem {
+  display: flex;
+}
+.cardBox {
+  background-color: #fcfcfc;
+}
+.card {
+  flex: 8;
+}
+.circle {
+  flex: 2;
+  font-size: 20rpx;
+  margin: auto 0;
+}

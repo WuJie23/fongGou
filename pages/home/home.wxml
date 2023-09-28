@@ -1,0 +1,42 @@
+<!--pages/home/home.wxml-->
+<wxs src="../home/slice.wxs" module="slice"></wxs>
+<swiper indicator-dots autoplay class="swiperBox">
+  <swiper-item class="swiperItem" wx:for="{{ swiperData }}" wx:key="index">
+    <image
+      class="swiperItemImg"
+      mode="widthFix"
+      src="http://localhost:5000{{ item.url }}"
+    />
+  </swiper-item>
+</swiper>
+<mp-searchbar
+  placeholder="搜索您想要的商品"
+  ext-class="searchbar"
+  bindtap="toSearch"
+></mp-searchbar>
+<view class="cardBox">
+  <view
+    class="cardBoxItem"
+    wx:for="{{ goodsData }}"
+    wx:key="index"
+    bindtap="toDetail"
+    data-id="{{ item.id }}"
+    data-title="{{ item.title }}"
+  >
+    <van-card
+      class="card"
+      price="{{ item.price }}"
+      desc="好评率：{{ item.goodcomment }}"
+      title="{{ item.title }}"
+      thumb="http://localhost:5000{{ item.poster }}"
+    />
+    <van-circle
+      class="circle"
+      size="42"
+      stroke-width="2"
+      color="#FAF06B"
+      value="{{ slice(item) }}"
+      text="{{ item.goodcomment }}"
+    />
+  </view>
+</view>
