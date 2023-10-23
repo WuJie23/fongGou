@@ -1,0 +1,4 @@
+<!--pages/auth/auth.wxml-->
+<van-button round type="primary" size="normal" bind:click="getAuth"
+  >微信授权</van-button
+>

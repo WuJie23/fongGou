@@ -1,0 +1,83 @@
+/* pages/searchList/searchList.wxss */
+page {
+  background-color: #f3f3f3;
+}
+.showRed {
+  color: red;
+}
+.sortPlan {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  border-bottom: #c5c5c5 2rpx solid;
+  color: #575757;
+  background-color: #fafafa;
+}
+.sortPlanItmeGood {
+  text-align: center;
+  /* flex: 1; */
+  width: 50%;
+}
+.sortPlanItmeSort {
+  text-align: center;
+  width: 50%;
+  /* flex: 1; */
+}
+.vtabs-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: inherit;
+  align-content: flex-start;
+  border-bottom: #ebebeb 2rpx solid;
+  margin: 10rpx 24rpx;
+  height: 100vh;
+}
+
+.vtabs-content-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340rpx;
+  height: 490rpx;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  padding: 10rpx 10rpx;
+  box-shadow: #f1f1f1 10rpx 10rpx 10rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.vtabs-content-item:hover {
+  box-shadow: #cecece 15rpx 15rpx 15rpx;
+}
+
+.vtabs-content-item-img-box {
+  width: 340rpx;
+  height: 340rpx;
+}
+.vtabs-content-item-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 50rpx;
+  max-height: 60px;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  color: #333;
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 10rpx;
+  font-weight: 600;
+}
+.vtabs-content-item-price {
+  color: red;
+  padding-top: 5rpx;
+  font-size: 30rpx;
+}
+.vtabs-content-item-goodcomment {
+  height: 40rpx;
+  font-size: 26rpx;
+  color: #5a5a5a;
+}

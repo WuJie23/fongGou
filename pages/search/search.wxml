@@ -1,2 +1,6 @@
 <!--pages/search/search.wxml-->
-<mp-searchbar placeholder="搜索您想要的商品" ></mp-searchbar>
+<mp-searchbar
+  bindselectresult="selectResult"
+  placeholder="搜索您想要的商品"
+  search="{{ search }}"
+></mp-searchbar>

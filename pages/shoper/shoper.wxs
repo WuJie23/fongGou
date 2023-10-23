@@ -1,0 +1,11 @@
+function sum(data) {
+  var sumNum = 0;
+  // console.log(data);
+  for (var i = 0; i < data.length; i++) {
+    if (data[i].checked) {
+      sumNum += data[i].good.price * data[i].number * 100;
+    }
+  }
+  return sumNum;
+}
+module.exports = sum;

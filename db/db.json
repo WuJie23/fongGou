@@ -727,38 +727,6 @@
       "number": 3,
       "checked": false,
       "id": 1
-    },
-    {
-      "username": "饮冰",
-      "tel": "111",
-      "goodId": 10,
-      "number": 1,
-      "checked": false,
-      "id": 2
-    },
-    {
-      "username": "饮冰",
-      "number": 2,
-      "goodId": 14,
-      "tel": "111",
-      "checked": true,
-      "id": 3
-    },
-    {
-      "username": "饮冰",
-      "tel": "111",
-      "goodId": 16,
-      "number": 5,
-      "checked": false,
-      "id": 5
-    },
-    {
-      "username": "饮冰",
-      "tel": "456",
-      "goodId": 1,
-      "number": 3,
-      "checked": false,
-      "id": 6
     }
   ],
   "users": [
@@ -772,50 +740,6 @@
       "avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epAvz1Q85rbZnRmKicDicF3uwySCicaY25pU2XKqItGzeQf3y1ibsr6raqnLnB2jBGrj7mzESGCHEO83Q/132",
       "tel": "111",
       "id": 1
-    },
-    {
-      "nickName": "饮冰",
-      "gender": 1,
-      "language": "zh_CN",
-      "city": "Dalian",
-      "province": "Liaoning",
-      "country": "China",
-      "avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epAvz1Q85rbZnRmKicDicF3uwySCicaY25pU2XKqItGzeQf3y1ibsr6raqnLnB2jBGrj7mzESGCHEO83Q/132",
-      "tel": "123",
-      "id": 2
-    },
-    {
-      "nickName": "饮冰",
-      "gender": 1,
-      "language": "zh_CN",
-      "city": "Dalian",
-      "province": "Liaoning",
-      "country": "China",
-      "avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epAvz1Q85rbZnRmKicDicF3uwySCicaY25pU2XKqItGzeQf3y1ibsr6raqnLnB2jBGrj7mzESGCHEO83Q/132",
-      "tel": "124",
-      "id": 3
-    },
-    {
-      "nickName": "饮冰",
-      "gender": 1,
-      "language": "zh_CN",
-      "city": "Dalian",
-      "province": "Liaoning",
-      "country": "China",
-      "avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epAvz1Q85rbZnRmKicDicF3uwySCicaY25pU2XKqItGzeQf3y1ibsr6raqnLnB2jBGrj7mzESGCHEO83Q/132",
-      "tel": "345",
-      "id": 4
-    },
-    {
-      "nickName": "饮冰",
-      "gender": 1,
-      "language": "zh_CN",
-      "city": "Dalian",
-      "province": "Liaoning",
-      "country": "China",
-      "avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epAvz1Q85rbZnRmKicDicF3uwySCicaY25pU2XKqItGzeQf3y1ibsr6raqnLnB2jBGrj7mzESGCHEO83Q/132",
-      "tel": "456",
-      "id": 5
     }
   ]
 }

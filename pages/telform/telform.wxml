@@ -1,0 +1,53 @@
+<!--pages/telform/telform.wxml-->
+<van-button
+  custom-class="van-button"
+  round
+  type="primary"
+  size="normal"
+  bind:click="getAuth"
+  ><van-icon name="phone" color="#fff" size="20" />手机号码绑定</van-button
+>
+
+<van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 60%"
+  bind:close="onClose"
+  closeable
+  close-icon="close"
+>
+  <view class="container">
+    <view class="page-body">
+      <form catchsubmit="formSubmit" catchreset="formReset">
+        <view class="page-section">
+          <view class="weui-cell__bd" style="margin: 30rpx 0">
+            <input
+              style="border: 1px solid rgba(221, 221, 221, 0.8); height: 80rpx"
+              class="weui-input"
+              name="input"
+              placeholder="   请输入手机号"
+            />
+          </view>
+        </view>
+        <!-- <van-notify id="van-notify" /> -->
+        <view
+          class="btn-area"
+          style="display: flex; justify-content: space-evenly; width: 600rpx"
+        >
+          <van-notify id="van-notify" />
+          <button
+            style="margin: 30rpx 0; width: 250rpx"
+            type="primary"
+            formType="submit"
+          >
+            提交
+          </button>
+          <button style="margin: 30rpx 0; width: 250rpx" formType="reset">
+            重置
+          </button>
+        </view>
+      </form>
+    </view>
+  </view>
+</van-popup>

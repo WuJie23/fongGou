@@ -1,0 +1,46 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="sortPlan">
+  <view
+    bindtap="sortPlanItmeGood"
+    class="sortPlanItmeGood {{ active == true ? 'showRed' : '' }}"
+  >
+    好评排序 <van-icon name="arrow-up" wx:if="{{ showIconGood }}" /><van-icon
+      wx:else
+      name="arrow-down"
+  /></view>
+  <view
+    bindtap="sortPlanItmeSort"
+    class="sortPlanItmeSort {{ active == true ? '' : 'showRed' }}"
+  >
+    价格排序 <van-icon name="arrow-up" wx:if="{{ showIconSort }}" /><van-icon
+      wx:else
+      name="arrow-down"
+  /></view>
+</view>
+
+<view class="vtabs-content">
+  <view
+    class="vtabs-content-item"
+    wx:for="{{ searchListData }}"
+    wx:key="id"
+    bindtap="toDetail"
+    data-id="{{ item.id }}"
+    data-title="{{ item.title }}"
+  >
+    <view class="vtabs-content-item-img-box">
+      <image
+        class="vtabs-content-item-img"
+        src="http://localhost:5000{{ item.poster }}"
+        mode="widthFix"
+      />
+    </view>
+
+    <view class="vtabs-content-item-text">
+      {{ item.title }}
+    </view>
+    <view class="vtabs-content-item-price"> 价格:￥{{ item.price }} </view>
+    <view class="vtabs-content-item-goodcomment">
+      好评率:{{ item.goodcomment }}
+    </view>
+  </view>
+</view>

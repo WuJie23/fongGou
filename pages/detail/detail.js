@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 import request from "../../util/request";
+import checkAuth from "../../util/auth.js";
 Page({
   /**
    * 页面的初始数据
@@ -88,10 +89,68 @@ Page({
         this.setData({
           commentsData: res,
         });
-        console.log(res, "resssss");
       })
       .catch((err) => {
         console.log(err);
       });
+  },
+  // 跳转购物车
+  onClickCar() {
+    checkAuth(() => {
+      wx.switchTab({
+        url: "/pages/shoper/shoper",
+      });
+    });
+  },
+  // Add To Car
+  onAddGoodsToCar() {
+    checkAuth(() => {
+      const username = wx.getStorageSync("token").nickName;
+      const tel = wx.getStorageSync("tel");
+      const id = this.data.detailData.id;
+      request({
+        url: `/carts?username=${username}&tel=${tel}&goodId=${id}`,
+        // data: {
+        //   username,
+        //   tel,
+        //   id,
+        // },
+      })
+        .then((res) => {
+          console.log(res, "re88s");
+          if (res.length === 0) {
+            // console.log(res, "没有数据");
+
+            request({
+              url: "/carts",
+              method: "POST",
+              data: {
+                username: username,
+                tel: tel,
+                goodId: id,
+                number: 1,
+                checked: false,
+              },
+            });
+          } else {
+            request({
+              url: `/carts/${res[0].id}`,
+              method: "PUT",
+              data: {
+                ...res[0],
+                number: res[0].number + 1,
+              },
+            });
+          }
+        })
+        .then(() => {
+          wx.showToast({
+            title: "提交成功",
+            icon: "success",
+            duration: 2000,
+          });
+        });
+    });
+    0;
   },
 });

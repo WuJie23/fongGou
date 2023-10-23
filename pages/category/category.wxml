@@ -7,7 +7,28 @@
 >
   <block wx:for="{{ vtabs }}" wx:key="title">
     <mp-vtabs-content tabIndex="{{ index }}">
-      <view class="vtabs-content-item"> {{ item.title }}</view>
+      <view class="vtabs-content">
+        <view
+          class="vtabs-content-item"
+          wx:for="{{ item.goods }}"
+          wx:key="id"
+          bindtap="toDetail"
+          data-id="{{ item.id }}"
+          data-title="{{ item.title }}"
+        >
+          <view class="vtabs-content-item-img-box">
+            <image
+              class="vtabs-content-item-img"
+              src="http://localhost:5000{{ item.poster }}"
+              mode="widthFix"
+            />
+          </view>
+
+          <view class="vtabs-content-item-text">
+            {{ item.title }}
+          </view>
+        </view>
+      </view>
     </mp-vtabs-content>
   </block>
 </mp-vtabs>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "手机号码绑定",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-notify": "@vant/weapp/notify/index"
+  }
+}

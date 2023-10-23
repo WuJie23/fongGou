@@ -5,7 +5,12 @@
     "pages/shoper/shoper",
     "pages/center/center",
     "pages/search/search",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/telform/telform",
+    "pages/auth/auth",
+    "pages/searchList/searchList"
+    
+
   ],
   "tabBar": {
     "list": [

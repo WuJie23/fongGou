@@ -1,1 +1,39 @@
 /* pages/shoper/shoper.wxss */
+page {
+  background-color: #f0f0f0;
+  padding-bottom: 150rpx;
+  padding-top: 15rpx;
+}
+
+.cardBox {
+  overflow: hidden;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff !important;
+  border-radius: 10rpx !important;
+  height: 260rpx;
+  margin: 4rpx 16rpx;
+  box-shadow: #e2e2e2 0 0 10rpx;
+}
+.custom {
+  width: 640rpx;
+  background-color: #fff !important;
+  padding-left: 0 !important;
+}
+.stepperInput {
+  margin-left: 10rpx !important;
+  font-size: 26rpx !important;
+  height: 40rpx !important;
+  background-color: #e9e9e9 !important;
+  border-radius: 10rpx !important;
+}
+.van-swipe-cell__right {
+  display: flex;
+  height: 100%;
+  width: 65px;
+  background-color: rgb(253, 47, 47);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}

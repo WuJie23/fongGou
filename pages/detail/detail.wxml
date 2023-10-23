@@ -70,7 +70,7 @@
           <image
             class="tabContentImg"
             src="http://localhost:5000{{ item.imgUrl }}"
-            mode="aspectFit"
+            mode="widthFix"
             lazy-load="true"
           >
           </image>
@@ -79,13 +79,14 @@
     </view>
   </van-tab>
 </van-tabs>
+<van-divider contentPosition="center">已加载到底部</van-divider>
 <!-- cart -->
 <van-goods-action>
-  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickCar" />
   <van-goods-action-button
     text="加入购物车"
     type="warning"
-    bind:click="onClickButton"
+    bind:click="onAddGoodsToCar"
   />
   <van-goods-action-button text="立即购买" bind:click="onClickButton" />
 </van-goods-action>

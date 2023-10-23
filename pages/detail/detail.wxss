@@ -1,8 +1,7 @@
 /* pages/detail/detail.wxss */
-/* .swiperItem{
-    height: 750rpx !important;
-  
-} */
+page {
+  padding-bottom: 150rpx;
+}
 .swiperBox {
   height: 540rpx;
 }

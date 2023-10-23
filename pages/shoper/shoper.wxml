@@ -1,2 +1,64 @@
 <!--pages/shoper/shoper.wxml-->
-<text>pages/shoper/shoper.wxml</text>
+<wxs src="./shoper.wxs" module="sum"></wxs>
+<van-swipe-cell
+  right-width="{{ 65 }}"
+  wx:for="{{ getShoperListData }}"
+  wx:key="index"
+>
+  <van-cell-group>
+    <view class="cardBox">
+      <van-checkbox
+        value="{{ item.checked }}"
+        checked-color="#07c160"
+        data-item="{{ item }}"
+        bind:change="onChangeCheckboxItem"
+      >
+      </van-checkbox>
+      <van-card
+        custom-class="custom"
+        num="{{ item.number }}"
+        tag="{{ item.number }}"
+        price="{{ item.good.price }}"
+        desc="{{ item.good.feature }}"
+        title="{{ item.good.title }}"
+        thumb="http://localhost:5000{{ item.good.poster }}"
+      >
+        <view slot="footer">
+          <van-stepper
+            data-item="{{ item }}"
+            input-class="stepperInput"
+            plus-class="stepperInput"
+            minus-class="stepperInput"
+            value="{{ item.number }}"
+            bind:change="onChangeStepper"
+            disable-input="true"
+          />
+        </view>
+      </van-card>
+    </view>
+  </van-cell-group>
+  <view
+    data-cellId="{{ item.id }}"
+    bindtap="deledetCell"
+    slot="right"
+    class="van-swipe-cell__right"
+    >删除</view
+  >
+</van-swipe-cell>
+<!-- <text class="" selectable="false" space="false" decode="false"
+  >{{ sum(getShoperListData) }}
+</text> -->
+<van-submit-bar
+  price="{{ sum(getShoperListData) }}"
+  button-text="提交订单"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+>
+  <van-checkbox
+    value="{{ checked }}"
+    checked-color="#07c160"
+    bind:change="onChangeCheckbox"
+  >
+    全选
+  </van-checkbox>
+</van-submit-bar>
